@@ -1,0 +1,301 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body{
+	background: black;
+}
+section{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background: black;
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+.judul{
+	color: white;
+	margin-left: 47px;
+
+}
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: 0.6s;
+	padding: 40px 100px;
+	z-index: 100000;
+}
+header.sticky{
+	padding: 5px 100px;
+	background: #fff;
+}
+header .logo{
+	position: relative;
+	font-weight: 700;
+	color: #fff;
+	text-decoration: none;
+	font-size: 2em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	transition: 0.6s;
+}
+header ul{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header ul li{
+	position: relative;
+	list-style: none;
+}
+header ul li a{
+	position: relative;
+	margin: 0 15px;
+	text-decoration: none;
+	color: #fff;
+	letter-spacing: 2px;
+	font-weight: 500px;
+	transition: 0.6s;
+}
+
+header.sticky.logo,
+header.sticky ul li a{
+	color: #000;
+}
+.isi{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 60vh;
+}
+.isi h2{
+	position: relative;
+	font-size: 6em;
+	color: #0e3742;
+	text-transform: uppercase;
+	width: 100%;
+	text-align: center;
+	-webkit-box-reflect: below -42px linear-gradient(transparent,#0004);
+}
+.isi h2 span{
+	animation: animate 5s linear infinite;
+}
+.isi h2 span:nth-child(even){
+	animation-delay: 0.4s;
+	}
+@keyframes animate{
+	0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
+	{
+		color: #0e3742;
+		text-shadow: none;
+	}
+	18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%
+	{
+		color: #fff;
+		text-shadow: 0 0 10px #03bcf4,
+		0 0 20px #03bcf4,
+		0 0 40px #03bcf4,
+		0 0 80px #03bcf4,
+		0 0 160px #03bcf4,
+		0 0 400px #03bcf4;
+	}
+}
+li.dropdown {
+	display: inline-block;
+}
+.dropdown:hover .isi-dropdown {
+	display: block;
+}
+.isi-dropdown a:hover {
+	color: #fff !important;
+}
+.isi-dropdown {
+	position: absolute;
+	display: none;
+	width: 190px;
+	text-align: center;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	background-color: #f9f9f9;
+}
+
+.isi-dropdown a {
+	color: #3c3c3c !important;
+}
+.isi-dropdown a:hover {
+	color: #232323 !important;
+	background: #f3f3f3 !important;
+}
+.section{
+    padding: 10px 0;
+}
+.container{
+	width: 80%;
+	height: 50px;
+    margin: 0 auto;
+}
+.container:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.box {
+    border: 1px solid #ccc;
+    padding: 15px;
+    box-sizing: border-box;
+    margin: 10px 0 25px 0;
+}
+.input-control {
+	align-items: center;
+    width: 70em;
+    padding:10px;
+    margin-bottom:15px;
+    box-sizing: border-box;
+    margin-left: 5%;
+
+}
+.simpan{
+   	padding:7px 10px;
+    background-color: #e67e22;
+    color: #fff;
+    border:none;
+    cursor: pointer;
+    margin-left: 5%;
+    
+}
+.card{
+	margin-top: 50px;
+	margin-left: 200px;
+	position: relative;
+	width: 300px;
+	height: 400px;
+	background: #000000;
+	transform-style: preserve-3d;
+	transform: perspective(2000px);
+	transition: 1s;
+	box-shadow: inset 300px 0 50px rgba(0,0,0,0.15),0 20px 20px rgba(0,0,0,0.15);
+}
+.card:hover{
+	transform: perspective(2000px) translateX(50%);
+	box-shadow: inset 20px 0 50px rgba(0,0,0,0.15),0 10px 10px rgba(0,0,0,0.15);
+}
+.card .cover{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #000000;
+	z-index: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform-style: preserve-3d;
+	overflow: hidden;
+	transition: 1s ease-in-out;
+	transform-origin: left;
+}
+.card:hover .cover{
+	transform: rotateY(-180deg);
+}
+.card .cover img{
+	width: 250px;
+	height: 300px;
+	z-index: 1;
+}
+.card .cover::before{
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 150%;
+	background: #000000;
+	transform: rotate(36.5deg);
+	box-shadow: 0 0 0 20px #2c2c2c;
+	transition: 0.5s;
+	transition-delay: 1s;
+}
+.card:hover	.cover::before{
+	width: 10px;
+	box-shadow: 0 0 0 250px #2c2c2c;
+	transform: rotate(143.5deg);
+}
+.card .details{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	text-align: center;
+	color: whitesmoke;
+	z-index: 1;
+}
+.card .details h3{
+	font-weight: 500;
+	margin: 5px 0;
+}
+.card .details h4{
+	font-size: 1.5em ;
+	color: orange;
+	font-size: 10px;
+}	
+.wadah{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 1200px;
+	flex-wrap: wrap;
+	z-index: 1;
+}
+.wadah .kotak{
+	position: relative;
+	width: 280px;
+	height: 400px;
+	margin: 30px;
+	box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+	border-radius: 15px;
+	background: rgba(255, 255, 255, 0.1);
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-top: 1px solid rgba(255, 255, 255, 0.5);
+	border-left: 1px solid rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(5px);
+}
+.wadah .kotak .tampilan{
+	padding: 20px;
+	text-align: center;
+	transform: translateY(100px);
+	opacity: 0;
+	transition: 0.5s;
+
+}
+.wadah .kotak:hover .tampilan{
+	transform: translateY(0px);
+	opacity: 1;
+}
+.wadah .kotak .tampilan h3{
+	font-size: 1.8em;
+	color: #fff;
+	z-index: 1;
+
+}
+.wadah .kotak .tampilan p{
+	font-size: 1em;
+	color: orange;
+	font-weight: 300;
+}
+

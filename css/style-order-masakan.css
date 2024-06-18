@@ -1,0 +1,70 @@
+body{
+	font-size:16px
+	color:#444;
+	font-family: sans-serif;
+}
+.container{
+	width: 90%;
+	margin: 0 auto;
+}
+.container after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.section{
+	padding: 10px 0;
+}
+.box{
+	background-color: #fff;
+	border: 1px solid #ccc;
+	padding: 15px;
+	box-sizing: border-box;
+	margin: 10px 0 25px 0;
+	height: 545px;
+}
+.box2{
+	width: 20%;
+	height: 235px;
+	border: 1px solid #ccc;
+	padding: 15px;
+	box-sizing: border-box;
+	float: left;
+	margin-bottom: 10px;
+	margin-right: 2%;
+}
+.box2 img{
+	width: 70%;
+	padding-left: 25px;
+}
+.box2 .nama{
+	color: #666;
+	font-weight: bold;
+	margin: 10px 0px;
+}
+.box2 .harga{
+	font-weight: bold;
+	color: #e67e22;
+	margin-top: 5px;	
+}
+.box2 .bayar{
+	border:2px solid  green;
+    background-color: green;
+    border-radius: 8px;	
+	color: white;
+ 	font-weight: bold;
+ 	padding: 5px 10px;
+ 	box-shadow: 0 0 3px #999;
+ 	text-decoration: none;
+}
+.box2 .bayar:hover{
+	 color: black;
+ 	 background-color: whitesmoke;
+}
+.input-control {
+    width: 125px;
+    padding:5px;
+    margin-bottom:15px;
+    box-sizing: border-box;
+
+}
